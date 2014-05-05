@@ -617,15 +617,8 @@ set(GAMEPLAY_RES_SHADERS
     res/ui/default.theme
 )
 
-include_directories( 
+include_directories(
     src
-    ../external-deps/lua/include
-    ../external-deps/bullet/include
-    ../external-deps/png/include
-    ../external-deps/zlib/include
-    ../external-deps/oggvorbis/include
-    ../external-deps/openal/include
-    ../external-deps/glew/include
 )
 
 IF(CMAKE_SYSTEM_NAME MATCHES "Linux")
@@ -652,6 +645,3 @@ set_target_properties(gameplay PROPERTIES
 source_group(lua FILES ${GAMEPLAY_LUA})
 source_group(res FILES ${GAMEPLAY_RES} ${GAMEPLAY_RES} ${GAMEPLAY_RES_SHADERS} ${GAMEPLAY_RES_UI})
 source_group(src FILES ${GAMEPLAY_SRC})
-
-
-
