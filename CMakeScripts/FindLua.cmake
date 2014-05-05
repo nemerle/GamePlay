@@ -92,7 +92,7 @@ find_path(LUA_INCLUDE_DIR lua.h
   /opt
 )
 unset(_lua_include_subdirs)
-message(${_lua_library_names})
+
 find_library(LUA_LIBRARY
   NAMES ${_lua_library_names} lua
   HINTS

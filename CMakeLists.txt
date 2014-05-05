@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.6)
 project(GamePlay)
 
 set(GAMEPLAY_VERSION 2.0.0)
-# set(CMAKE_C_COMPILER_INIT g++) not forcing g++ compiler
+set(CMAKE_C_COMPILER_INIT g++)
 
 # architecture
 if ( CMAKE_SIZEOF_VOID_P EQUAL 8 )
@@ -12,6 +12,7 @@ else()
 set(ARCH_DIR "x86")
 endif()
 
+# Selecting the way dependencies are resolved, either pre-compiled ones, or using cmnake's find_package system.
 option(USE_LOCAL_LIBRARIES "Use local libraries instead of pre-compiled package ?" OFF)
 
 if(USE_LOCAL_LIBRARIES)
