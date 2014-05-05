@@ -5,11 +5,12 @@ project(GamePlay)
 set(GAMEPLAY_VERSION 2.0.0)
 # set(CMAKE_C_COMPILER_INIT g++) not forcing g++ compiler
 
-LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CmakeScripts)
+LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeScripts)
 
 find_package(OpenAL REQUIRED)
 find_package(glfw REQUIRED)
 find_package(GLEW REQUIRED)
+set(Lua_FIND_VERSION 2)
 find_package(Lua REQUIRED)
 find_package(Freetype REQUIRED)
 find_package(ZLIB REQUIRED)
